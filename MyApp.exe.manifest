@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+	<assemblyIdentity type="win32" name="MyControl.dll" version="1.0.0.0" />
+	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
+		<security>
+			<requestedPrivileges>
+				<requestedExecutionLevel level="asInvoker" uiAccess="false" />
+			</requestedPrivileges>
+		</security>
+	</trustInfo>
+	<file name="MyControl.dll">
+		<comClass progid="MyControl.MainWindow" clsid="{CB5671E7-7A8A-419c-BE3A-82ABE55A35E3}" description="MyControl" />
+		<typelib tlbid="{E5C47749-B016-4c7e-A443-572773BAF1E4}" version="1.0" helpdir="" />
+	</file>
+</assembly>

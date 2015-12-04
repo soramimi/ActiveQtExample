@@ -1,12 +1,18 @@
 #include "MyControl.h"
 #include "ui_MyControl.h"
-#include <QPainter>
+#include <QMessageBox>
 
 MyControl::MyControl(QWidget *parent) :
-	QWidget(parent),
+	QMainWindow(parent),
 	ui(new Ui::MyControl)
 {
 	ui->setupUi(this);
+
+	ui->menuBar->setFont(QFont("Meiryo", 9));
+	ui->statusBar->setFont(QFont("Meiryo", 9));
+	ui->statusBar->addWidget(new QLabel("Hello, world"));
+
+	counter = 0;
 }
 
 MyControl::~MyControl()
@@ -14,8 +20,15 @@ MyControl::~MyControl()
 	delete ui;
 }
 
-void MyControl::paintEvent(QPaintEvent *)
+void MyControl::on_action_test_triggered()
 {
-	QPainter pr(this);
-	pr.drawEllipse(0, 0, width() - 1, height() - 1);
+	counter++;
+	ui->label->setText(QString::number(counter));
+
+}
+
+void MyControl::on_action_file_open_triggered()
+{
+	QMessageBox::information(qobject_cast<QWidget *>(parent()), qApp->applicationName(), "open triggered");
+
 }

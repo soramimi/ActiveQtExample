@@ -11,9 +11,11 @@ TEMPLATE = lib
 CONFIG += dll
 
 SOURCES += main.cpp\
-        MyControl.cpp
+        MyControl.cpp \
+    ContentFrame.cpp
 
-HEADERS  += MyControl.h
+HEADERS  += MyControl.h \
+    ContentFrame.h
 
 FORMS    += MyControl.ui
 
@@ -31,3 +33,6 @@ Debug:OBJECTS_DIR=$$PWD/build/debug
 Debug:MOC_DIR=$$PWD/build/debug
 Debug:RCC_DIR=$$PWD/build/debug
 Debug:UI_DIR=$$PWD/build/debug
+
+RESOURCES += \
+    resources.qrc

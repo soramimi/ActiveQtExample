@@ -22,8 +22,13 @@ public:
 private slots:
 	void on_action_test_triggered();
 	void on_action_file_open_triggered();
+    void on_pushButton_clicked();
+
 private:
 	Ui::MyControl *ui;
+
+signals:
+    void OnButtonClickedEvent();
 };
 
 #endif // MYCONTROL_H

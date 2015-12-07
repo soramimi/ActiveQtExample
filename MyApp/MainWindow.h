@@ -10,10 +10,15 @@ class MainWindow;
 class MainWindow : public QMainWindow
 {
 	Q_OBJECT
-
+private:
+    int button_clicked_count;
 public:
 	explicit MainWindow(QWidget *parent = 0);
 	~MainWindow();
+
+private slots:
+
+    void on_axWidget_OnButtonClickedEvent();
 
 private:
 	Ui::MainWindow *ui;

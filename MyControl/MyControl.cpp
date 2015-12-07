@@ -25,10 +25,15 @@ void MyControl::on_action_test_triggered()
 	counter++;
 	ui->label->setText(QString::number(counter));
 
+    emit OnButtonClickedEvent();
 }
 
 void MyControl::on_action_file_open_triggered()
 {
 	QMessageBox::information(qobject_cast<QWidget *>(parent()), qApp->applicationName(), "open triggered");
 
+}
+
+void MyControl::on_pushButton_clicked()
+{
 }
